@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  /* background-color: #fff; */
+}
+
+body {
+}
+
+html {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.custom_entete {
+  background-color: green;
+  font-family: "Roboto", sans-serif;
+}
+.custom_inputsearch {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.custom_bar {
+  width: 80%;
+  border-color: #000;
+  /* padding: 5px 5px; */
+}
+
+.custom_bar:focus {
+  border-color: green;
+}
+
+.fa-magnifying-glass {
+  color: #fff;
+  padding: 10px 10px;
+  background-color: green;
+}
+
+@media (max-width: 900px) {
+  .custom_menu_icon {
+    margin: 10px auto;
+  }
+
+  .custom_inputsearch {
+    margin-left: 0;
+  }
+  .custom_bar {
+    padding: 5px 5px;
+  }
+}
+
+/*  LE CAROUSSEL*/
+
+.slider {
+  position: relative;
+
+  overflow: hidden;
+  height: 70vh;
+  width: 95vw;
+  margin: 0 auto;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  width: 600px;
+  background: none;
+
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  color: #333;
+  padding: 35px;
+  opacity: 0;
+}
+.slide .content p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000;
+  background: none;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+  background: none;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #333;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+}
+
+/* Background image */
+
+.slide:first-child {
+  background: url(./Menu/s22.jpg) no-repeat center/cover;
+}
+
+.slide:nth-child(2) {
+  background: url(./Menu/findx5.jpg) no-repeat center/cover;
+}
+
+.slide:nth-child(3) {
+  background: url(./Menu/mate30.jpg) no-repeat center/cover;
+}
+
+.slide:nth-child(4) {
+  background: url(./Menu/vr.webp) no-repeat center/cover;
+}
+
+.slide:nth-child(5) {
+  background: url(./Menu/ps5.webp) no-repeat center/cover;
+}
+
+.slide:nth-child(6) {
+  background: url(./Menu/watch.jpg) no-repeat center/cover;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+/*LES CATEGORIE DES PRODUITS*/
+.cathegorie-container {
+}
+
+.cathegorie-img {
+  width: 100%;
+}
+
+.cathegorie-img img {
+  width: 200px;
+  height: 140px;
+  margin: 0 auto;
+  /* border-radius: 20%; */
+}
+
+.cathegorie-text {
+}
+
+/*LES MEILLEURS VENTES */
+.custom_slideitem {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.custom_apercu {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  top: 0px;
+  right: -10px;
+  transition: all 0.7s ease-in-out;
+  transform: translate(100%, 100%);
+  color: #000;
+}
+
+.custom_slideitem:hover .custom_apercu {
+  transform: translate(-15px, 25px);
+}
+
+/*LES PRODUITS EXCLUSIFS */
+
+.custom_vedette_img {
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* PROMOTION */
+
+.custom_promo_percentage {
+  padding: 5px 5px;
+  background-color: yellowgreen;
+  color: #fff;
+}
+.custom_promo_link {
+  padding: 10px 10px;
+  background-color: yellowgreen;
+  color: #000;
+}
+
+.custom_promo_huawei_watch_link {
+}
+
+.custom_promo_huawei_watch_img {
+  max-height: 365px;
+  object-fit: cover;
+}
+
+/* LES MARQUES */
+
+.custom_marque_logo {
+  font-weight: 900;
+  padding: 10px 10px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ICONES SERVICES*/
+
+.custom_service_icone {
+  color: green;
+}
+
+/*  FOOTER */
+
+#FOOTER {
+  margin-top: 100px;
+  background-color: #ebf3f5;
+  padding: 10px 10px;
+}
+
+.footer-container {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-item {
+}
+
+.footer-item h1 {
+}
+
+.footer-item ul {
+}
+
+.footer-item ul li {
+  /* display: flex; */
+
+  margin: 10px auto;
+}
+
+.footer-item ul li i {
+  margin-right: 10px;
+  color: #e17055;
+}
+
+.notification {
+  margin: 10px auto;
+}
+
+.notification input {
+  padding: 10px 10px;
+  margin-right: -6px;
+}
+
+.notification button {
+  padding: 10px 10px;
+  background: #e17055;
+  color: #fff;
+  cursor: pointer;
+}
+
+.paiement {
+  margin-left: -2px;
+}
+
+.paiement i {
+  /* color: #30336b;  */
+
+  margin: 0 3px;
+}
+
+.visa {
+  color: #30336b;
+}
+
+.master {
+  color: #f39c12;
+}
+
+.google {
+  color: #3498db;
+}
+
+.paypal {
+  color: #4834d4;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-item {
+    max-width: 700px;
+    text-align: left;
+  }
+
+  .preview img {
+    height: 25rem;
+  }
+}
+
+/* LA PAGE DES SMARTPHONES*/
+.underline {
+  height: 3px;
+  width: 100px;
+  background-color: #f7941d;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background-color: #fff !important;
+  border: none;
+}
+
+.smartphone_container {
+  position: relative;
+}
+.btn-primary:hover {
+  background-color: #f7941d !important;
+  color: #fff !important;
+}
+.smartphone {
+  width: 15%;
+}
+
+/*LES ELEMENT DU FILTRE */
+
+.filtre-element {
+  animation: fade 0.6s ease-in;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*PAGE DETAIL */
+
+.custom_detail_img {
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  cursor: pointer;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+span {
+  position: relative;
+}
+
+sup {
+  position: absolute;
+  top: -20px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  background-color: red;
+  color: #fff;
+  padding: 12px 7px;
+}
